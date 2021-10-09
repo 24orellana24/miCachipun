@@ -15,7 +15,7 @@ for (let i = 1; i <= numJuegos; i++) {
   // Ciclo para preguntar la opción del jugador, validando que sea un número entero de 1 a 3
   let opcionJugador = 0
   do {
-    opcionJugador = parseInt(prompt('Juego N°' + i + '\nSelecciones un número:\n1 = Piedra\n2 = Papel\n3 = Tijera'))    
+    opcionJugador = parseInt(prompt('Juego N°' + i + '\nSelecciona un número:\n1 = Piedra\n2 = Papel\n3 = Tijera'))    
   } while (isNaN(opcionJugador) || opcionJugador < 1 || opcionJugador > 3);
 
   // Asignación aleatoria para la opción de la máquina, la que devuelve un número entero de 1 a 3
@@ -52,23 +52,23 @@ for (let i = 1; i <= numJuegos; i++) {
 
   // Evaluación de los resultados para establecer quien gana el juego
   if (opcionJugador === opcionMaquina) {
-    alert('Empate | Maquina ' + maquina + ' | Jugador ' + jugador)
+    alert('Empate | Máquina ' + maquina + ' | Jugador ' + jugador)
     contEmpate++
 
   } else if (opcionJugador === 1 && opcionMaquina === 3) {
-    alert('Gana Jugador | Maquina ' + maquina + ' | Jugador ' + jugador)
+    alert('Gana Jugador | Máquina ' + maquina + ' | Jugador ' + jugador)
     contJugador++
 
   } else if (opcionJugador === 2 && opcionMaquina === 1) {
-    alert('Gana Jugador | Maquina ' + maquina + ' | Jugador ' + jugador)
+    alert('Gana Jugador | Máquina ' + maquina + ' | Jugador ' + jugador)
     contJugador++
 
   } else if (opcionJugador === 3 && opcionMaquina === 2) {
-    alert('Gana Jugador | Maquina ' + maquina + ' | Jugador ' + jugador)
+    alert('Gana Jugador | Máquina ' + maquina + ' | Jugador ' + jugador)
     contJugador++
 
   } else {
-    alert('Gana Maquina | Maquina ' + maquina + ' | Jugador ' + jugador)
+    alert('Gana Maquina | Máquina ' + maquina + ' | Jugador ' + jugador)
     contMaquina++
   }
 }
@@ -84,4 +84,4 @@ if (contJugador === contMaquina) {
 }
 
 // Despliege del mensaje del resumen del juego y del gabador final
-alert('El juego ha finalizado, el resultado es el siguiente:\n\nJuegos Evaluados: ' + numJuegos + '\nEmpatados: ' + contEmpate + '\nGanados por el Jugador: ' + contJugador + '\nGanados por la Maquina: ' + contMaquina + '\n\n' + mensajeGanador)
+alert('El juego ha finalizado, el resultado es el siguiente:\n\nJuegos Evaluados: ' + numJuegos + '\nEmpatados: ' + contEmpate + '\nGanados por el Jugador: ' + contJugador + '\nGanados por la Máquina: ' + contMaquina + '\n\n' + mensajeGanador)
